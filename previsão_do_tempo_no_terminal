@@ -1,0 +1,16 @@
+#Para rodar esse código será necessário uma chave api do site openweather
+
+chave = 'digite aqui a sua chave de API'
+cidade=input('Cidade desejada: ')
+link = f'https://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={chave}'
+
+trans = Translator()
+
+chamada = requests.get(link)
+dicionario = chamada.json()
+descricao=dicionario['weather'][0]['description']
+descricao_traduzida=trans.translate(descricao,dest='pt').text
+temperatura_k=dicionario['main']['temp']
+temperatura_c= temperatura_k  -273.15
+print(f'Previsão do tempo em {cidade}\n\nTemperatura: {int(temperatura_c)}°C\nDescrição:{descricao_traduzida}')
+
