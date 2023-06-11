@@ -1,3 +1,6 @@
+from googletrans import Translator
+import requests
+
 #Para rodar esse código será necessário uma chave api do site openweather
 
 chave = 'digite aqui a sua chave de API'
