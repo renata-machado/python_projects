@@ -15,5 +15,5 @@ descricao=dicionario['weather'][0]['description']
 descricao_traduzida=trans.translate(descricao,dest='pt').text
 temperatura_k=dicionario['main']['temp']
 temperatura_c= temperatura_k  -273.15
-print(f'Previsão do tempo em {cidade}\n\nTemperatura: {int(temperatura_c)}°C\nDescrição:{descricao_traduzida}')
+print(f'Previsão do tempo em {cidade}\n\nTemperatura: {int(temperatura_c)}°C\n{descricao_traduzida}')
 
