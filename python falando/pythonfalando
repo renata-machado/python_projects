@@ -1,0 +1,17 @@
+from gtts import gTTS
+from playsound import playsound
+import os
+
+while True:
+    frase=input('digite algo: ')
+    audio = f'audio.mp3'
+    idioma='pt'
+    sp= gTTS(
+        text = frase,
+        lang = idioma
+
+    )
+   
+    sp.save(audio)
+    playsound(audio)
+    os.remove(audio)
