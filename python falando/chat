@@ -1,0 +1,22 @@
+import speech_recognition as sr
+from gtts import gTTS
+from playsound import playsound
+
+
+nome= input('digite seu nome: ')
+while True:
+    rec = sr.Recognizer()
+    #print(sr.Microphone().list_microphone_names())
+    with sr.Microphone() as mic:
+        rec.adjust_for_ambient_noise(mic)
+        print("fala: ")
+        audio = rec.listen(mic)
+        texto = rec.recognize_google(audio, language="pt-BR")
+        print(texto)
+
+    audio = 'audio.mp3'
+    idioma='pt-br'
+    if texto== 'Oi computador':
+        sp= gTTS(text = f'olá {nome}, você conhece o Mário? ',lang = idioma)
+        sp.save(audio)
+        playsound(audio)
