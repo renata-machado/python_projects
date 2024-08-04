@@ -28,6 +28,6 @@ def login(username, password):
     driver.quit()
 
 # Usage
-username = "20211imi035"
-password = "@Kokkurisan1"
+username = "matricula"
+password = "senha"
 login(username, password)
