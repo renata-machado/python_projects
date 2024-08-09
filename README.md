@@ -1,1 +1,1 @@
-Um repositório com projetos python
+Um repositório com projetos python :)
