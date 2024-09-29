@@ -61,7 +61,7 @@ def musica_anterior():
         tocar_musica()
 
 def tocar_musica():
-    global tocando, musica_atual, lista_musicas
+    global tocando, musica_atual, lista_musicas,indice_musica
 
     if lista_musicas:
         mixer.music.load(lista_musicas[indice_musica])

@@ -1,0 +1,19 @@
+# Ignorar arquivos de configuração sensíveis
+.env
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar diretórios de compilação
+__pycache__/
+build/
+dist/
+
+pyvenv.cfg
+
+Scripts
+
+Lib
+
+Include
+
